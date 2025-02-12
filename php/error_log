@@ -1,0 +1,11 @@
+[02-Aug-2023 22:06:30 UTC] PHP Warning:  Undefined array key "name" in /home/webfulcreations/public_html/html-templates/it-tech/php/contact.php on line 5
+[02-Aug-2023 22:06:30 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webfulcreations/public_html/html-templates/it-tech/php/contact.php on line 5
+[02-Aug-2023 22:06:30 UTC] PHP Warning:  Undefined array key "email" in /home/webfulcreations/public_html/html-templates/it-tech/php/contact.php on line 7
+[02-Aug-2023 22:06:30 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webfulcreations/public_html/html-templates/it-tech/php/contact.php on line 7
+[02-Aug-2023 22:06:30 UTC] PHP Warning:  Undefined array key "message" in /home/webfulcreations/public_html/html-templates/it-tech/php/contact.php on line 8
+[02-Aug-2023 22:06:30 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/webfulcreations/public_html/html-templates/it-tech/php/contact.php on line 8
+[02-Aug-2023 22:06:30 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: Invalid address:  (From):  in /home/webfulcreations/public_html/html-templates/it-tech/php/mailer/phpmailer/phpmailer/src/PHPMailer.php:1284
+Stack trace:
+#0 /home/webfulcreations/public_html/html-templates/it-tech/php/contact.php(10): PHPMailer\PHPMailer\PHPMailer->setFrom('', '')
+#1 {main}
+  thrown in /home/webfulcreations/public_html/html-templates/it-tech/php/mailer/phpmailer/phpmailer/src/PHPMailer.php on line 1284

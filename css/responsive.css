@@ -1,0 +1,138 @@
+/*
+    Template Name    : Inform - IT Solutions & Business Services Web Template
+    Author           : AvailableCoder
+    Version          : 1.0s
+    Created          : 2021
+    File Description : Responsive css file of the template
+*/
+
+/* Small */
+@media (min-width: 768px) {
+   
+}
+@media (max-width: 576px) {
+    .home-slider .swiper-slide .home-links,
+    .home1 .text .home-links {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .home-slider .swiper-slide.swiper-slide-active .home-links a,
+    .home1 .text .home-links a {
+        text-align: center;
+    }
+    .home-slider .swiper-slide.swiper-slide-active .home-links a:first-of-type,
+    .home1 .text .home-links a {
+        margin-bottom: 8px;
+    }
+    .about .about-field .about-image .image .years::before,
+    .about .about-field .about-image .image .years::after {
+        display: none;
+    }
+    .moreview .over-field .view-content .merits {
+        flex-direction: column;
+    }
+    .new .new-cont p {
+        font-size: 15px;
+    }
+    .blog .pagination-blogs a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        margin: 0 1px;
+    }
+}
+@media (max-width: 767px) {
+    .home-slider .swiper-slide .text h1,
+    .home1 .text h1 {
+        line-height: 1.8;
+    }
+    .counter .counter-area > div,
+    .counter-1 .counter-area > div {
+        flex-basis: 100% !important;
+        margin-bottom: 60px;
+    }
+    .innerhome {
+        height: 300px;
+    }
+    .innerhome h1 {
+        font-size: 35px;
+    }
+    .innerhome > span {
+        width: 30px;
+    }
+    .services-details .serv-details-content .serv-icon {
+        width: 70px;
+        padding: 12px;
+    }
+    .services-details .serv-details-content .serv-details-text .listed-text li,
+    .project-details .prog-details-content .prog-details-text .listed-text li {
+        flex-basis: 100%;
+    }
+    .blog-single .blog-comment-person {
+        box-shadow: 0px 0px 1px 5px rgba(136, 136, 136, 0.05),
+                    0px 0px 1px 7px rgba(136, 136, 136, 0.05),
+                    0px 0px 1px 10px rgba(136, 136, 136, 0.05);
+        border-radius: 15px;
+    }
+    .contact .contact-field > div.contact-form-box .flex-form > div:nth-child(1),
+    .contact .contact-field > div.contact-form-box .flex-form > div:nth-child(2) {
+        flex-basis: 100%;
+    }
+    .coming-field #timer > div {
+        flex-basis: calc(50% - 10px);
+    }
+    .coming-field > h2 {
+        font-size: 30px;
+    }
+    .coming-field > p {
+        font-size: 15px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .home-slider .swiper-slide .text h1,
+    .home1 .text h1 {
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+}
+@media (max-width: 991px) {
+    header nav ul li a.nav-link:before {
+        display: none;
+    }
+    .home1 {
+        padding-top: 120px;
+    }
+    .faq .accordion-field {
+        flex-basis: 100%;
+    }
+    .contact .contact-field {
+        flex-direction: column-reverse;
+    }
+    .contact .contact-field > div {
+        flex-basis: 100%;
+    }
+    .contact .contact-field > div.contact-form-box {
+        padding: 20px;
+    }
+}
+/* Large */
+@media (max-width: 1140px) {
+    .counter .counter-area > div {
+        flex-basis: calc(50% - 40px);
+        margin-bottom: 60px;
+    }
+    .counter-1 .counter-area > div {
+        flex-basis: calc(50% - 40px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .home-slider .swiper-slide .text h1,
+    .home1 .text h1 {
+        font-size: 50px;
+        letter-spacing: 2px;
+    }
+}
