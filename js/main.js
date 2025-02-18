@@ -32,10 +32,10 @@ $(document).ready(function () {
         // Header animation 
         if ($(this).scrollTop() > 80) {
             $("header").addClass("slide-header");
-            $("header nav .navbar-brand img").attr("src" , "images/logos/logo_color.png")
+            $("header nav .navbar-brand img").attr("src" , "images/logos/HGC.png")
         } else {
             $("header").removeClass("slide-header");
-            $("header nav .navbar-brand img").attr("src" , "images/logos/logo_white.png")
+            $("header nav .navbar-brand img").attr("src" , "images/logos/HGC1.png")
         }
         // ---
         // ScrollTop show
