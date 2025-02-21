@@ -48,6 +48,95 @@
     <button class="scroll-top">
         <i class="fas fa-space-shuttle"></i>
     </button>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <svg class="circle-loader" viewBox="0 0 100 100">
+                <circle class="track" cx="50" cy="50" r="45"></circle>
+                <circle class="progress" cx="50" cy="50" r="45"></circle>
+            </svg>
+            <p>Loading <span id="loading-text">0</span>%</p>
+        </div>
+    </div>
+
+    <style>
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #007bff, #6638ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            font-size: 24px;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Circular Loader Styles */
+        .circle-loader {
+            width: 100px;
+            height: 100px;
+            transform: rotate(-90deg);
+        }
+
+        .track,
+        .progress {
+            fill: none;
+            stroke-width: 8;
+            stroke-linecap: round;
+        }
+
+        .track {
+            stroke: rgba(255, 255, 255, 0.3);
+        }
+
+        .progress {
+            stroke: #fff;
+            stroke-dasharray: 283; /* Full circumference */
+            stroke-dashoffset: 283; /* Initially hidden */
+            transition: stroke-dashoffset 0.2s linear;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let count = 0;
+            let loadingText = document.getElementById("loading-text");
+            let progressCircle = document.querySelector(".progress");
+            let preloader = document.getElementById("preloader");
+
+            function updateLoader() {
+                if (count < 100) {
+                    count += Math.floor(Math.random() * 10) + 5;
+                    if (count > 100) count = 100;
+
+                    // Update text
+                    loadingText.textContent = count;
+
+                    // Update circular progress
+                    let progressValue = 283 - (count / 100) * 283; // Calculate stroke offset
+                    progressCircle.style.strokeDashoffset = progressValue;
+
+                    setTimeout(updateLoader, 200);
+                } else {
+                    setTimeout(() => {
+                        preloader.style.opacity = "0"; // Fade out
+                        setTimeout(() => {
+                            preloader.style.display = "none"; // Hide
+                            document.body.style.overflow = "auto"; // Enable scrolling
+                        }, 500);
+                    }, 500);
+                }
+            }
+
+            updateLoader();
+        });
+    </script>
+
     <div class="preloader main-gradiant">
         <div class="loader">
             <span></span>
@@ -1002,5 +1091,16 @@
     <script src="js/fancybox.umd.js"></script>
     <script src="js/main.js"></script>
     <!-- - - - -->
+    <!-- Preloader -->
+<div id="preloader">
+    <div class="preloader-content">
+        <p>Loading <span id="loading-percent">0</span>%</p>
+        <div class="progress-bar">
+            <div id="progress" class="progress"></div>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>
