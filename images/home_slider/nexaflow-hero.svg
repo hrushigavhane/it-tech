@@ -1,0 +1,166 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nexaflowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0.4" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="5" stdDeviation="10" flood-color="#6366f1" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background circles -->
+  <circle cx="100" cy="100" r="80" fill="url(#nexaflowGradient)" opacity="0.1"/>
+  <circle cx="500" cy="300" r="60" fill="url(#glowGradient)" opacity="0.15"/>
+  <circle cx="450" cy="80" r="40" fill="#06b6d4" opacity="0.1"/>
+  
+  <!-- Central AI brain network -->
+  <g transform="translate(300, 200)">
+    <!-- Central core -->
+    <circle cx="0" cy="0" r="25" fill="url(#nexaflowGradient)" filter="url(#glow)"/>
+    
+    <!-- Neural network nodes -->
+    <circle cx="-60" cy="-40" r="12" fill="#8b5cf6" opacity="0.8"/>
+    <circle cx="60" cy="-50" r="10" fill="#06b6d4" opacity="0.8"/>
+    <circle cx="-70" cy="30" r="14" fill="#6366f1" opacity="0.8"/>
+    <circle cx="50" cy="40" r="11" fill="#f59e0b" opacity="0.8"/>
+    <circle cx="0" cy="-80" r="13" fill="#8b5cf6" opacity="0.8"/>
+    <circle cx="0" cy="70" r="9" fill="#06b6d4" opacity="0.8"/>
+    
+    <!-- Connection lines -->
+    <line x1="0" y1="0" x2="-60" y2="-40" stroke="url(#nexaflowGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="0" y1="0" x2="60" y2="-50" stroke="url(#nexaflowGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="0" y1="0" x2="-70" y2="30" stroke="url(#nexaflowGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="0" y1="0" x2="50" y2="40" stroke="url(#nexaflowGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="0" y1="0" x2="0" y2="-80" stroke="url(#nexaflowGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="0" y1="0" x2="0" y2="70" stroke="url(#nexaflowGradient)" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Secondary connections -->
+    <line x1="-60" y1="-40" x2="-70" y2="30" stroke="#8b5cf6" stroke-width="1" opacity="0.4"/>
+    <line x1="60" y1="-50" x2="50" y2="40" stroke="#06b6d4" stroke-width="1" opacity="0.4"/>
+    <line x1="0" y1="-80" x2="60" y2="-50" stroke="#6366f1" stroke-width="1" opacity="0.4"/>
+  </g>
+  
+  <!-- Cloud infrastructure elements -->
+  <g transform="translate(150, 120)">
+    <!-- Cloud shape -->
+    <path d="M20,40 Q10,20 30,20 Q40,10 60,20 Q80,15 90,30 Q85,45 70,45 L30,45 Q15,45 20,40 Z" 
+          fill="url(#nexaflowGradient)" opacity="0.7" filter="url(#shadow)"/>
+    
+    <!-- Data streams -->
+    <rect x="35" y="28" width="2" height="8" fill="#fbbf24" opacity="0.8">
+      <animate attributeName="height" values="8;15;8" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="40" y="25" width="2" height="12" fill="#06b6d4" opacity="0.8">
+      <animate attributeName="height" values="12;20;12" dur="1.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="45" y="30" width="2" height="6" fill="#8b5cf6" opacity="0.8">
+      <animate attributeName="height" values="6;12;6" dur="1.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="50" y="27" width="2" height="10" fill="#6366f1" opacity="0.8">
+      <animate attributeName="height" values="10;18;10" dur="2.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  
+  <!-- Quantum computing visualization -->
+  <g transform="translate(450, 150)">
+    <!-- Quantum bits -->
+    <circle cx="0" cy="0" r="8" fill="none" stroke="url(#nexaflowGradient)" stroke-width="2">
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0.6">
+      <animateTransform attributeName="transform" type="rotate" values="360;0" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="22" fill="none" stroke="#8b5cf6" stroke-width="1" opacity="0.4">
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Quantum state -->
+    <circle cx="0" cy="0" r="3" fill="url(#glowGradient)" filter="url(#glow)"/>
+  </g>
+  
+  <!-- Data visualization charts -->
+  <g transform="translate(80, 280)">
+    <!-- Bar chart -->
+    <rect x="0" y="20" width="8" height="30" fill="#6366f1" opacity="0.7">
+      <animate attributeName="height" values="30;45;30" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="12" y="10" width="8" height="40" fill="#8b5cf6" opacity="0.7">
+      <animate attributeName="height" values="40;55;40" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="24" y="15" width="8" height="35" fill="#06b6d4" opacity="0.7">
+      <animate attributeName="height" values="35;50;35" dur="2.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="36" y="5" width="8" height="45" fill="#f59e0b" opacity="0.7">
+      <animate attributeName="height" values="45;60;45" dur="3.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  
+  <!-- Security shield -->
+  <g transform="translate(480, 280)">
+    <path d="M0,0 L15,5 L30,0 L30,25 Q30,35 15,40 Q0,35 0,25 Z" 
+          fill="url(#nexaflowGradient)" opacity="0.8" filter="url(#glow)"/>
+    
+    <!-- Lock icon -->
+    <rect x="12" y="18" width="6" height="8" fill="white" opacity="0.9"/>
+    <circle cx="15" cy="15" r="3" fill="none" stroke="white" stroke-width="1.5" opacity="0.9"/>
+  </g>
+  
+  <!-- Floating tech icons -->
+  <g transform="translate(120, 60)">
+    <circle cx="0" cy="0" r="12" fill="rgba(99, 102, 241, 0.1)" stroke="#6366f1" stroke-width="1">
+      <animateTransform attributeName="transform" type="translate" values="0,0;5,-5;0,0" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="4" text-anchor="middle" font-family="Arial" font-size="12" fill="#6366f1">🔬</text>
+  </g>
+  
+  <g transform="translate(520, 50)">
+    <circle cx="0" cy="0" r="10" fill="rgba(6, 182, 212, 0.1)" stroke="#06b6d4" stroke-width="1">
+      <animateTransform attributeName="transform" type="translate" values="0,0;-3,7;0,0" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="3" text-anchor="middle" font-family="Arial" font-size="10" fill="#06b6d4">⚡</text>
+  </g>
+  
+  <g transform="translate(60, 320)">
+    <circle cx="0" cy="0" r="11" fill="rgba(139, 92, 246, 0.1)" stroke="#8b5cf6" stroke-width="1">
+      <animateTransform attributeName="transform" type="translate" values="0,0;8,3;0,0" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="4" text-anchor="middle" font-family="Arial" font-size="11" fill="#8b5cf6">🚀</text>
+  </g>
+  
+  <!-- Connecting data streams -->
+  <g opacity="0.3">
+    <path d="M50,50 Q200,100 350,150" stroke="url(#nexaflowGradient)" stroke-width="1" fill="none">
+      <animate attributeName="stroke-dasharray" values="0,100;50,50;100,0" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M550,100 Q400,200 250,300" stroke="#06b6d4" stroke-width="1" fill="none">
+      <animate attributeName="stroke-dasharray" values="0,100;50,50;100,0" dur="4s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Floating particles -->
+  <circle cx="200" cy="80" r="2" fill="#fbbf24" opacity="0.6">
+    <animateTransform attributeName="transform" type="translate" values="0,0;10,-5;0,0" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="380" cy="320" r="1.5" fill="#8b5cf6" opacity="0.5">
+    <animateTransform attributeName="transform" type="translate" values="0,0;-7,8;0,0" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="550" cy="200" r="2.5" fill="#06b6d4" opacity="0.4">
+    <animateTransform attributeName="transform" type="translate" values="0,0;5,10;0,0" dur="9s" repeatCount="indefinite"/>
+  </circle>
+</svg>
